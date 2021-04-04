@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tournaments",
+  "info": {
+    "name": "Tournaments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "game": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "main_rewards": {
+      "type": "text"
+    },
+    "cover": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "applied_squads": {
+      "collection": "squad"
+    }
+  }
+}

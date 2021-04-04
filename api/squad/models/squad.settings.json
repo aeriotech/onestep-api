@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "squads",
+  "info": {
+    "name": "Squad"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "members": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
