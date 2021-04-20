@@ -59,9 +59,20 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "discord_name": {
-      "type": "string",
-      "unique": true
+    "membership": {
+      "model": "membership",
+      "via": "member"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

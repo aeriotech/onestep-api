@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "memberships",
+  "info": {
+    "name": "Membership",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "member": {
+      "via": "membership",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "squad": {
+      "via": "memberships",
+      "model": "squad"
+    },
+    "isLeader": {
+      "type": "boolean"
+    }
+  }
+}
