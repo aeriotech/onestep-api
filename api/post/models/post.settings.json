@@ -28,6 +28,10 @@
     },
     "tags": {
       "collection": "tags"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
